@@ -1,0 +1,788 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+   	background-image: url(image/back.webp);
+
+}
+
+.title{
+	font-size: 2rem;
+	margin-top:20px;
+	margin-left:20px;
+	font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:darkgreen;
+}
+
+.rightarea{
+	    border: 0px solid #ccc;
+	    width:100%;
+}
+
+button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid darkgreen;
+    background-color: #fff;
+    cursor: pointer;
+    color: darkgreen;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover{
+    background-color: darkgreen;
+    color: #fff;
+}
+
+/*新規登録
+=======================================================*/
+.createcontainer{
+	width:500px;
+	height:600px;
+	background-color: rgba(193, 255, 193,0.2);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	padding:30px;
+
+}
+.createblock{
+	margin: auto;
+    border: 0px solid black;
+    width: fit-content;
+}
+
+.createblock input {
+	font-size: large;
+	width: 400px;
+	height: 40px;
+}
+
+.createblock button {
+	font-size: large;
+	margin-top:50px;
+	width: 100%;
+	height: 50px;
+}
+
+
+/*トップページ
+=======================================================*/
+.top-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    border: 0px solid black;
+}
+
+.top-title {
+    margin-top: 20px;
+
+}
+
+.top-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.box {
+    border: 0px solid #000;
+    width: 400px;
+    height: 300px;
+    margin: 20px;
+    padding: 20px;
+    opacity: 0.8;
+    text-align: left;
+    background-color: rgba(193, 255, 193,0.2);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	color:darkgreen;
+	font-weight: bold;
+}
+
+.box input {
+    width: 80%;
+    height: 30px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 1px solid darkgreen;
+    padding: 5px;
+}
+
+.box button {
+    width: 150px;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid darkgreen;
+    background-color: #fff;
+    cursor: pointer;
+    color: darkgreen;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.box button:hover{
+    background-color: darkgreen;
+    color: #fff;
+}
+
+.box .t1{
+	margin-bottom:20px;
+}
+
+.box .t2{
+	margin-top:10px;
+}
+.news-box {
+	display: none;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f3f2f3;
+    border-left: 10px solid #4c9ac0;
+}
+
+/*トップページ（一般：画像掲示板）
+=======================================================*/
+.imageform {
+	margin:20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.imageform .c1{
+	border: 0px solid darkgreen;
+	padding:20px;
+	width: max-content;
+	background-color: rgba(193, 255, 193,0.2);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.imageform input[type="text"]{
+	width: 400px;
+	height: 20px;
+}
+
+
+.imagelist {
+	margin-left:20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 20px;
+}
+.imagelist > div{
+    border: 0px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+.imagelist img {
+    max-width: 100%;
+    height: auto;
+}
+
+.imagebox{
+	border-radius: 10px;
+	background-color: rgba(193, 255, 193,0.2);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.imagebox .name{
+	font-size: 1.5rem;
+    font-weight: bold;
+    color:green;	 
+		
+}
+
+.imagebox .des{
+	margin-left:20px;
+	height:20px;
+	padding:10px;
+	background-color: rgba(193, 255, 193,0.2);			
+}
+
+.imagebox .time{
+	text-align:right;
+	padding:10px;			
+}
+
+/*メニュー
+=======================================================*/
+.page-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100%;
+
+    border: 0px solid black;
+}
+.image{
+	text-align: center;
+	padding-top:10px;
+	
+}
+.user{
+    border: 5px double darkgreen;
+    background-color: white;
+	height:60px;
+	text-align: center;
+	line-height: 60px;
+}
+.logout{
+	text-align: right;
+}
+
+.logout a {
+    border: 1px solid darkgreen; /* ボーダーの設定 */
+    padding: 5px; /* 内側の余白 */
+    margin-top: 5px; /* 上部のマージン */
+    text-decoration: none; /* 下線をなくす */
+    font-weight:normal; /* フォントの太さ */
+    background-color: white;
+    color: darkgreen; /* テキストの色 */
+    display: inline-block; /* インラインブロック要素として扱う */
+    transition: background-color 0.3s, color 0.3s; /* ホバー時のトランジション */
+}
+
+.logout a:hover {
+    background-color: darkgreen; /* ホバー時の背景色 */
+    color: #fff; /* ホバー時のテキスト色 */
+}
+
+.leftarea{
+	padding:0px 10px;
+    border: 0px solid black;
+}
+.menu-title{
+    width: 250px;
+    height: 40px;
+    color: white;
+    background-color: rgb(0, 64, 64);
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 40px;
+    margin-top:20px;
+    padding-left: 10px;
+    
+}
+.link{
+    width: 250px;
+    height: 80px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: darkgreen;
+    border-bottom: 1px solid darkgreen;
+    text-align: left;
+    line-height: 80px;
+    padding-left: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.link:hover{
+	background-color: darkgreen;
+}
+.link a{
+	display: block;
+	text-decoration: none;
+	color:darkgreen
+}
+.link a:hover{
+	color:white
+}
+
+/* テーブル（管理者）
+=======================================================*/
+table{
+	border-collapse: collapse;
+	margin-top:20px;
+	margin-left:20px;
+}
+
+
+tbody td{
+	border-left:0px;
+	border-right:0px;
+	border-bottom:1px solid;
+	border-color: darkgreen;
+	padding:5px 10px;
+	height:20px;
+	background-color: rgba(193, 255, 193,0.2);
+}
+
+tbody tr:hover{
+	background-color: darkgreen;
+	color:white;
+}
+
+th{
+	text-align: left;
+	padding-left:10px;
+}
+
+/* 俳句リスト（管理者）
+=======================================================*/
+
+.adminlist .c1{ /*No(HaikuID)*/
+	text-align:center;
+	width:70px;
+}
+.adminlist .c2{ /*Haiku*/
+	text-align:left;
+	font-size:auto;
+	width:450px;
+}
+.adminlist .c3{ /*表示名(DisplayName)*/
+	width:150px;	
+}
+.adminlist .c4{ /*公開(visibility)*/
+	width:100px;	
+}
+.adminlist .c5{ /*投稿日(postdata)*/
+	width:150px;
+}
+
+.adminlist button {
+    width: 100px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid darkgreen;
+    background-color: #fff;
+    cursor: pointer;
+    color: darkgreen;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.adminlist button:hover{
+    background-color: darkgreen;
+    color: #fff;
+}
+
+/*
+	絞り込み
+*/
+
+.select-outer{
+	margin:0px 0px;
+}
+
+.select-area{
+	display: flex;
+	margin: 5px 20px;
+	padding:20px 0px;
+	width:800px;
+	background-color: rgba(193, 255, 193,0.2)
+}
+.select-area input{
+	width:100px
+}
+
+.select-area .area2{
+	margin-left:20px;
+	display: flex;
+    flex-direction: column;
+}
+
+.select-block{
+	display: flex;
+	margin-bottom:5px;
+}
+
+.select-block label{
+	display: inline-block;
+	width:120px;
+	text-align: right;
+	margin-right:10px;
+}
+
+.select-area .area2 button{
+    width: 100px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid darkgreen;
+    background-color: #fff;
+    cursor: pointer;
+    color: darkgreen;
+    transition: background-color 0.3s, color 0.3s;
+    margin-bottom:10px;
+}
+
+.select-area .area2 button:hover{
+    background-color: darkgreen;
+    color: #fff;
+}
+
+.filter-button{
+    width: 200px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid darkgreen;
+    background-color: #fff;
+    cursor: pointer;
+    color: darkgreen;
+    transition: background-color 0.3s, color 0.3s;
+    margin:30px 0px 5px 20px;
+}
+
+.filter-button:hover{
+    background-color: darkgreen;
+    color: #fff;
+}
+
+/* アカウントリスト（管理者）
+=======================================================*/
+.accountlist .c1{
+	text-align: center;
+}
+.accountlist .c2{
+	text-align: left;
+	width:150px;
+}
+.accountlist .c3{
+	text-align: left;
+	width:200px;
+}
+.accountlist .c4{
+	text-align: left;
+	width:150px;
+}
+
+/* テーマリスト(管理者）
+=======================================================*/
+.themelist .c1{
+	width:auto;
+	text-align:center
+}
+.themelist .c2{
+	width:200px;
+	text-align:left
+}
+
+
+/* 俳句投稿（一般）
+=======================================================*/
+.post-title{
+	font-size:2rem;
+	margin-top:20px;
+	margin-left:20px;
+}
+.post-form{
+	width: fit-content;
+	margin-top:50px;
+	margin-left:20px;
+	color:darkgreen;
+	font-weight: bold;
+	font-size: 1.5rem;
+	padding:30px;
+	background-color: rgba(193, 255, 193,0.2);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.post-form input{	
+	width:500px;
+	height:50px;
+	font-size:1.2rem;
+    border: none;
+    border-bottom: 1px solid darkgreen;
+    background-color: rgba(255,255,255,0.5);
+    padding: 5px;
+}
+
+.post-form select{
+	width:200px;
+	height:50px;
+	font-size: 2rem;
+    background-color: rgba(255,255,255,0.5);
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid darkgreen;
+}
+
+.post-form option{
+	font-size: 2rem;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.post-form button {
+    width: 150px;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid darkgreen;
+    background-color: #fff;
+    cursor: pointer;
+    color: darkgreen;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.post-form button:hover{
+    background-color: darkgreen;
+    color: #fff;
+}
+
+.post-form .c1{
+	margin-top:10px;
+	margin-bottom: 5px;
+}
+
+.post-form .c2{
+	width:max-content;
+	margin-top: 20px;
+	margin-bottom: 5px;
+
+}
+
+/* 俳句確認（一般）
+=======================================================*/
+
+.conf-title{
+	font-size: 2rem;
+	margin-top:20px;
+	margin-left:50px;
+}
+.conf-haiku{
+	width:600px;
+	margin-left:20px;
+	margin-top:50px;
+	background-color:#fff;
+	border: 5px double darkgreen;		
+}
+
+.conf-haiku .c2{
+	margin: 20px;
+	font-size: 2rem;
+}
+
+.conf-haiku .c3{
+	color:darkgreen
+}
+
+.data{
+	border: 0px solid darkgreen;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+    justify-content: flex-end;
+}
+
+.data2{
+	margin-left:20px;
+	border: 0px solid darkgreen;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+    justify-content: flex-start;
+}
+.data2 .c5{
+	margin-top:10px;
+}
+
+.conf-haiku .c4{
+	margin-right:20px;
+}
+
+.modify{
+	margin-top:50px;
+	text-align: center;
+	line-height: 60px;
+}
+.post{
+	margin-top:50px;
+	margin-left:50px;
+	text-align: center;
+	line-height: 60px;
+}
+
+.data2 button{
+	display: block;
+    width: 200px;
+    height: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid darkgreen;
+    background-color: #fff;
+    cursor: pointer;
+    color: darkgreen;
+    transition: background-color 0.3s, color 0.3s;
+	
+}
+.data2 button:hover{
+    background-color: darkgreen;
+    color: #FFFFFF
+}
+
+/*投稿成功
+=======================================================*/
+.success a {
+    border: 1px solid darkgreen; 
+    width: 200px;
+    height: 50px;
+    padding: 5px;
+    margin-top: 20px;
+    margin-left:20px;
+    text-decoration: none; 
+    font-weight:normal; 
+    background-color: white;
+    color: darkgreen; 
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.success a:hover {
+    background-color: darkgreen;
+    color: #fff;
+}
+
+
+
+/*俳句リスト
+=======================================================*/
+.haiku-block{
+	margin-top:20px;
+	margin-left:20px;
+	width:800px;
+	border: 5px double darkgreen;
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+    background-image: url(image/wasi.jpg);
+    filter: brightness(110%);
+	background-color: rgba(193, 255, 193,0.2);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.haiku-block .c1{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+    justify-content: flex-start;
+}
+
+.haiku-block .c2{
+    font-family: "Yuji Syuku", serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size:2rem;
+	margin-left:10px;
+	margin-top:10px;
+	margin-bottom:20px;
+}
+
+.haiku-block .c3{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+    justify-content: flex-end;
+    color: gray;
+}
+
+.haiku-block .c3 .t1{
+	margin-right:10px;
+}
+
+
+.haiku-block button{
+	display: block;
+    width: 100px;
+    height: 25px;
+    font-size: 0.7rem;
+    line-height: 20px;
+    margin-bottom:10px;
+    border: 2px solid darkgreen;
+    background-color: #fff;
+    cursor: pointer;
+    color: darkgreen;
+    transition: background-color 0.3s, color 0.3s;
+	
+}
+.haiku-block button:hover{
+    background-color: darkgreen;
+    color: #FFFFFF
+}
+
+.title span{
+	font-size:1.5rem;
+}
+
+/*俳句編集
+=======================================================*/
+
+/*コメント
+=======================================================*/
+.comment-textbox {
+    width: 80%;
+    height: 100px;
+    font-size: 1.2rem;
+    border: 1px solid darkgreen;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    margin: 10px 0;
+    resize: vertical; /* 垂直方向のリサイズを許可 */
+}
+
+textarea{
+	width:100%;
+}
+
+
+.come1{
+  height:20px;
+}
+
+
+.come2{
+	margin-left:0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+.come2 > div {
+    display: table-cell;
+	text-align: left;
+    border: 0px solid black;
+    padding: 0px;
+}
+.come2 .left-column {
+    font-weight: bold;
+    color:green;	    
+}
+
+/*改行を有効にする*/
+.right-column pre {
+	font-size:1.2rem;
+	margin-left: 20px;
+    white-space: pre-wrap;
+}
+
+.come2 .last-column {
+    border:0px solid black;
+	text-align: right;
+        
+}
+
+.yuji-syuku-regular {
+  font-family: "Yuji Syuku", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.mochiy-pop-one-regular {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
