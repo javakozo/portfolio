@@ -65,14 +65,6 @@ String createdUserName = (request.getParameter("createdUserName") != null) ? req
         
     </div>
 
-    <!-- お知らせ -->
-    <div class="news-box">
-        [管理者]<br>
-        ユーザー名 admin パスワード 1234<br>
-        <br>
-        [一般]<br>
-        ユーザー名 ippan パスワード 1234<br>
-    </div>
 
 </div>
 
