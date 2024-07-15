@@ -16,10 +16,10 @@ String createdUserName = (request.getParameter("createdUserName") != null) ? req
 
 <div class="top-container">
 
-    <div class="top-title">
+   <div class="top-title">
 		<img src="image/title.png">
 	</div>
-    
+
     <div class="top-box">
         <!-- ログイン -->
         <div class="box">
@@ -62,10 +62,8 @@ String createdUserName = (request.getParameter("createdUserName") != null) ? req
             </form>
         </div>
         
-        
-    </div>
-
-
+     </div>       
+     
 </div>
 
 </body>

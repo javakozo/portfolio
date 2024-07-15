@@ -96,7 +96,11 @@ public class LoginServlet extends HttpServlet {
 
 							// データベースから関連するroleを取得
 							String srole = DataBaseUtil.getColumnValue(sessionAccountID, "accountdata", "role");
-
+							
+							// 管理者であるかどうかを判定し、isAdminフラグをセット
+							boolean isAdmin = "admin".equals(srole);
+							session.setAttribute("isAdmin", isAdmin);
+							
 							//ロール毎に遷移
 							if ("admin".equals(srole)) {
 								request.getRequestDispatcher("/WEB-INF/classes/admin/topAdmin.jsp").forward(request,
@@ -109,13 +113,13 @@ public class LoginServlet extends HttpServlet {
 
 						} else {
 							// ログイン失敗なら遷移せずに、最初のページにエラーメッセージを送る
-							request.setAttribute("errorMessage", "ユーザーネームかパスワードが違います");
+							request.setAttribute("errorMessage", "ユーザー名またはパスワードが違います");
 							request.getRequestDispatcher("index.jsp").forward(request, response);
 
 						}
 
 					} else {
-						request.setAttribute("errorMessage", "ユーザーネームかパスワードが違います");
+						request.setAttribute("errorMessage", "ユーザー名またはパスワードが違います");
 						request.getRequestDispatcher("index.jsp").forward(request, response);
 					}
 

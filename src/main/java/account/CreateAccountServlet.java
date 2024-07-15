@@ -60,7 +60,7 @@ public class CreateAccountServlet extends HttpServlet {
 					int count = rs.getInt("count");
 					if (count > 0) {
 						// 重複エラー
-						request.setAttribute("errorMessage", "そのユーザーIDはすでに登録されています");
+						request.setAttribute("errorMessage", "ユーザー名が既に使用されています");
 						request.getRequestDispatcher("/WEB-INF/classes/account/createAccount.jsp").forward(request, response);
 						return;
 					}
@@ -76,7 +76,7 @@ public class CreateAccountServlet extends HttpServlet {
 					int count = rs.getInt("count");
 					if (count > 0) {
 						// 重複エラー
-						request.setAttribute("errorMessage", "その表示名はすでに使用されています");
+						request.setAttribute("errorMessage", "表示名が既に使用されています");
 						request.getRequestDispatcher("/WEB-INF/classes/account/createAccount.jsp").forward(request, response);
 						return;
 					}

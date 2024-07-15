@@ -89,7 +89,7 @@ List<ImagePost> posts = (List<ImagePost>) request.getAttribute("posts");
 		    <% for(ImagePost post : posts) { %>
 		    	<div class="imagebox">
 		            <div>
-		            	<img src="<%= "upimages/" + post.getImageUrl() %>" alt="投稿画像">
+		            	<img src="<%= "upimages/" + post.getImageUrl() %>" alt="投稿画像" class="postimage">
 		           	</div>
 		            <div class="name">
 		            	<%= DataBaseUtil.getColumnValue((int) post.getAccountID(), "accountdata", "displayName") %>

@@ -14,7 +14,16 @@
 <%
 String displayName = DataBaseUtil.getColumnValue((int)session.getAttribute("sessionAccountID"),"accountdata", "displayName");
 %>
-	
+    <%
+    // セッションから管理者フラグを取得
+    Boolean isAdmin = (Boolean) session.getAttribute("isAdmin");
+    
+ 	// 管理者でない場合はトップページなどへリダイレクト
+    if (isAdmin == null || !isAdmin) {
+        response.sendRedirect(request.getContextPath() + "/LoginServlet");
+        return;
+    }
+    %>	
 <div class="page-container">
 
 	<!-- leftarea -->

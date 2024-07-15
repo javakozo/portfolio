@@ -26,7 +26,7 @@
 		<div class="createblock">
 			<form action="CreateAccountServlet" method="post">
 			<div>
-				ユーザーネーム
+				ユーザー名
 			</div>
 			<div>
 				<input type="text" name="userName" placeholder="半角英数のみ。先頭文字は英文字のみ" pattern="[a-zA-Z][a-zA-Z0-9]*" required title="先頭文字は英字で、半角英数字のみ使用できます。">

@@ -10,6 +10,18 @@
         isfilter = "false"; // 初期値は非表示として設定
     }
 %>
+
+    <%
+    // セッションから管理者フラグを取得
+    Boolean isAdmin = (Boolean) session.getAttribute("isAdmin");
+    
+ // 管理者でない場合はトップページなどへリダイレクト
+    if (isAdmin == null || !isAdmin) {
+        response.sendRedirect(request.getContextPath() + "/LoginServlet");
+        return;
+    }
+    %>
+
 <!DOCTYPE html>
 <html>
 <head>
