@@ -17,9 +17,9 @@ import image.ImagePost;
  * インポートして使う。
  */
 public class DataBaseUtil {
-    private static final String URL = "jdbc:mysql://localhost:3306/haiku";
-    private static final String USER = "root"; // データベースのユーザー名
-    private static final String PASSWORD = "MySQL@2024"; // データベースのパスワード
+    private static final String URL = "jdbc:mysql://database-1.cris22a023tv.ap-northeast-1.rds.amazonaws.com:3306/haiku";
+    private static final String USER = "admin"; // データベースのユーザー名
+    private static final String PASSWORD = "Servgo0714"; // データベースのパスワード
 
     static {
         try {
